@@ -22,7 +22,7 @@
 </template>
 
 <script>
-let BASE_URL = 'http://192.168.233.100'
+let BASE_URL = 'http://192.168.56.101'
 export default {
   name: 'App',
   components: {},
