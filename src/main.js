@@ -5,7 +5,7 @@ import App from './App.vue';
 import axios from 'axios'
 import VueAxios from "vue-axios"
 
-// axios.defaults.withCredentials = true
+axios.defaults.timeout = 4500;
 Vue.use(ElementUI);
 Vue.use(VueAxios, axios)
 
