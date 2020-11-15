@@ -114,7 +114,7 @@ export default {
     },
     checkStatus() {
       for (let item of this.array) {
-        this.$http.get(BASE_URL + item.ping).then(response => {
+        this.$http.get(BASE_URL + item.ping, {timeout: 4500}).then(response => {
           if (response) {
             item.status = true
           }
