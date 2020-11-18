@@ -82,9 +82,9 @@ export default {
     }
   },
   created() {
-    // if (process.env.NODE_ENV === 'development') {
-    //   BASE_URL = 'http://127.0.0.1'
-    // }
+    if (process.env.NODE_ENV === 'development') {
+      BASE_URL = 'http://127.0.0.1'
+    }
   },
   mounted() {
     this.checkStatus()
@@ -114,6 +114,7 @@ export default {
     },
     checkStatus() {
       for (let item of this.array) {
+        console.log(item)
         this.$http.get(BASE_URL + item.ping, {timeout: 4500}).then(response => {
           if (response) {
             item.status = true
